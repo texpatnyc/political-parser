@@ -1,0 +1,22 @@
+{
+"manifest_version": 2,
+    "name": "Political Parser",
+    "description": "Makes the news a lot more fun to read",
+    "version": "1.0",
+    "permissions": [
+        "http://*.google.com/",
+        "http://*.com/",
+        "tabs"
+    ],
+    "content_scripts": [
+        {
+            "matches": [
+                "*://*/*"
+            ],
+            "js": [
+                "content.js"
+            ],
+            "run_at": "document_end"
+        }
+    ]
+}
